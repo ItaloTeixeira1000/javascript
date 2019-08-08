@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		var pos = 8;
+		var res = "Sua posição: ";
+		switch(pos){
+			case 1:
+				res+="primeiro lugar";
+				
+				break;
+			case 2:
+				res+="segundo lugar";
+			
+				break;
+			case 3:
+				res+="terceiro lugar";
+				
+				break;	
+			default:
+				res+="não obteve medalha";
+		}
+		switch(pos){
+			case 1:
+			case 2:
+			case 3:
+				res+="<br>Subiu ao pódio";
+				
+				break;	
+			default:
+				res+="<br>não subiu ao pódio";
+		}
+		document.write(res);
+	</script>
+</head>
+<body>
+
+</body>
+</html>

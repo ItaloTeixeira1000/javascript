@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		label{
+			display: block;
+		}
+		input{
+			display: block;
+		}
+		input[type=submit],label{
+			margin-top: 10px;
+		}
+	</style>
+</head>
+<body>
+	<form name="curso1" id="curso01" action="#" method="post">
+		<label>Nome</label>
+		<input type="text" name="fNome" id="teste" value="Primeiro - 1">
+		<label>Senha</label>
+		<input type="password" name="fSenha" value="123">
+		<input type="submit" name="btEnviar" value="Enviar">
+	</form>
+
+	<form name="curso2" id="curso2" action="#" method="post">
+		<label>Nome</label>
+		<input type="text" name="fNome" id="teste" value="Segundo - 2">
+		<label>Senha</label>
+		<input type="password" name="fSenha" value="123">
+		<input type="submit" name="btEnviar" value="Enviar">
+	</form>
+
+	<hr>
+
+	<script type="text/javascript">
+		//forms aponta para o formulário
+
+		var fm = document.forms.length;
+		document.write(fm);
+
+		var fId= document.forms[1].id;
+		document.write("<br>"+fId);
+
+
+		//Trabalha do mesmo jeito que o exemplo anterior
+		var fItem= document.forms.item(1).id;
+		document.write("<br>"+fItem);
+
+		var fNamedItem= document.forms.namedItem("curso1").innerHTML;
+		document.write("<br>"+fNamedItem);
+
+		//Apontando para os elementos do formulário, ou seja, os inputs
+
+		var fElementos = document.forms["curso01"].elements[0].value;
+		document.write(fElementos);
+
+		//Manipulando elementos com o forms
+
+		var f1 = document.forms[0];
+		var f2 = document.forms[1];
+
+		var el = f1.elements;
+
+		for(var i=0;i<el.length-1;i++){		
+			el[i].style.backgroundColor="#ddd";
+			el[i].value="CFB Cursos";
+		}
+
+		//pegando valor com getElementById
+
+		document.write(document.getElementById("curso2").elements[0].value);
+
+	</script>
+
+</body>
+</html>

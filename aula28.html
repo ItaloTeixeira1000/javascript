@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+
+	<script type="text/javascript">
+		//imprimi a data completa
+		document.write(Date());
+
+		//Para obter o dia
+
+		var dt = new Date(1978,2,7);//ano,mes,dia,hora,min,seg,milis
+		var ndt = new Date();
+
+		//setando o dia
+		ndt.setDate(dt.getDate()+2);
+
+		var dia = ndt.getDate();
+		document.write(dia);
+
+		//Para pegar o dia da semana
+
+		var diasem = ndt.getDay();
+		document.write(diasem);
+
+		//Para obter o mês
+		var mes = ndt.getMonth();
+		document.write(mes);
+
+		//Para obter o ano
+		var ano = ndt.getFullYear();
+		document.write(ano);
+
+		//Pegando as horas
+
+		var horas = ndt.getHours();
+		var minutos = ndt.getMinutes();
+		var segundos = ndt.getSeconds();
+
+
+
+		var meses = new Array("Janeiro", "Fevereiro","Março","Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro");
+		var semanas = new Array("Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado");
+
+		//Imprimindo data completa
+		document.write("<br>"+semanas[diasem] + ", " + dia + " de " + meses[mes] + " de " + ano + "<br>");
+
+		document.write(horas +":"+minutos+":"+segundos);
+
+	</script>
+</body>
+</html>

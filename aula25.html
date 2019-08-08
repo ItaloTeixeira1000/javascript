@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title></title>
+	<meta charset="utf-8">
+
+</head>
+<body>
+
+	<h2>CFB Cursos</h2>
+	<p>Curso de JavaScript</p>
+	<h2>Aula 25</h2>
+	<p>www.youtube.com/cfbcursos/</p>
+	<h2>cfbcursos.com.br</h2>
+
+	<hr/>
+
+	<script type="text/javascript">
+		var tagsP = document.getElementsByTagName("p");
+
+		document.write(tagsP[0].innerHTML);
+		for(var c=0;c<tagsP.length;c++){
+
+			tagsP[c].style.color="#f00";
+		}
+
+		//pegando apenas o índice 1 do vetor 
+		var teste = document.getElementsByTagName("p")[1];
+		document.write("<br>"+teste.innerHTML);
+
+		//Pegando todas as tags
+		var tudo = document.getElementsByTagName("*");
+
+		tudo[7].innerHTML="Novo texto";
+	</script>	
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		.titulo{
+			color: #f00;
+			font-size: 20px;
+			text-decoration: underline;
+		}
+
+		div{
+			border: 1px solid #000;
+			padding: 10px;
+			display: inline-block;
+		}
+		a{
+			display: block;
+		}
+
+		.quadro{
+			background-color: #ddd;
+		}
+	</style>
+</head>
+<body>
+	<h1 class="titulo">querySelectorAll</h1>
+	<p>O querySelectorAll() é um metodo que retorna os elementos do documento que correspondem a uma classe de CSS ou uma tag específica</p>
+	<h2 class="titulo">Curso de JavaScript</h2>
+	<p class="titulo">cfbcursos.com.br</p>
+	<div>
+		<h3>JavaScript aula - 26</h3>
+		<p>Este texto está dentro de uma div</p>
+		<p>Este também</p>
+	</div>
+		<div class="quadro">
+		<h3>JavaScript aula - 26</h3>
+		<p>Este texto está dentro de uma div</p>
+		<p>Este também</p>
+	</div>
+	<a href="http://www.youtube.com/cfbcursos">CANAL</a>
+	<a href="HTTP://cfbcursos.com.br">SITE</a>
+
+	<hr>
+
+	<script type="text/javascript">
+		
+		var ps = document.querySelectorAll("p");
+		ps[0].style.color="#00f";
+		document.write(ps[0].innerHTML="Novo texto");
+
+		var elementos = document.querySelectorAll(".titulo");
+		for(var c=0;c<elementos.length;c++){
+
+			document.write("<br>"+elementos[c].innerHTML);
+		}
+
+		var pT=document.querySelectorAll("p.titulo");
+		document.write("<br>"+ pT[0].innerHTML);
+
+		var pDiv = document.querySelectorAll("div.quadro > p");
+
+		for(var c = 0; c< pDiv.length;c++){
+			pDiv[c].style.color="#0f0";
+		}
+
+			var p2 = document.querySelectorAll("p,h1,h3");
+
+			for(var c = 0; c< p2.length;c++){
+			p2[c].style.color="#0f0";
+		}
+
+	</script>
+
+</body>
+</html>
